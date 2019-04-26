@@ -4,7 +4,7 @@
 
 2) Create a new role called `IIS`. This role will install IIS features with the `win_feature` module.
 
-3) Create a `defaults/main.yaml` file and add a _variable_ called IISFeatures containing the following features:
+3) Create a `defaults/main.yaml` file and add a _variable_ called `IISFeatures` containing the following features:
 
 * `Web-Server`
 * `Web-Common-Http`
