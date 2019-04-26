@@ -1,3 +1,7 @@
-[windowsserver]
+[windows]
 
-[linuxserver]
+[windowsserver:vars]
+
+[linuxs]
+
+[linux:vars]
