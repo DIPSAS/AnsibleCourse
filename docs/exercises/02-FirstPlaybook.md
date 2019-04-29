@@ -8,4 +8,4 @@
 
 4) Run the playbook against the inventory file.
 
-hint: `ansible-playbook -i [path/to/file.inventory] Appserver.yaml --verbose`
+    hint: `ansible-playbook -i [path/to/file.inventory] Appserver.yaml --verbose`

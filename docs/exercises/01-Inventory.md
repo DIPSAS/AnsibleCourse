@@ -4,7 +4,7 @@
 
 2) Use the `win_ping` module to verify that a connection can be made to the server.
 
-hint: `ansible [host_group_name_in_inventory_file] -i inventory/servers.inventory -m win_ping`
+    hint: `ansible [host_group_name_in_inventory_file] -i inventory/servers.inventory -m win_ping`
 
 ## Inventory - Linux
 
@@ -16,4 +16,4 @@ hint: `ansible [host_group_name_in_inventory_file] -i inventory/servers.inventor
 
 4) Use the `ping` module to verify that a connection can be made to the server.
 
-hint: `ansible [host_group_name_in_inventory_file] -i inventory/servers.inventory -m ping`
+    hint: `ansible [host_group_name_in_inventory_file] -i inventory/servers.inventory -m ping`

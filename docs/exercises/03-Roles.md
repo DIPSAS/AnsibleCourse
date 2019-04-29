@@ -6,20 +6,20 @@
 
 3) Create a `defaults/main.yaml` file and add a _variable_ called `IISFeatures` containing the following features:
 
-* `Web-Server`
-* `Web-Common-Http`
-* `Web-App-Dev`
-* `Web-Net-Ext45`
-* `Web-Asp-Net45`
+    * `Web-Server`
+    * `Web-Common-Http`
+    * `Web-App-Dev`
+    * `Web-Net-Ext45`
+    * `Web-Asp-Net45`
 
-hint: `yaml` lists are on the following format: 
+    hint: `yaml` lists are on the following format: 
 
-```yaml
+    ```yaml
 
-list:
-    - item 1
-    - item 2
-```
+    list:
+        - item 1
+        - item 2
+    ```
 
 4) Use `with_items:` to make `win_feature` install the list of IIS features.
 
