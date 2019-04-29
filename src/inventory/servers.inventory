@@ -2,6 +2,6 @@
 
 [windowsserver:vars]
 
-[linuxs]
+[zookeepers]
 
-[linux:vars]
+[zookeepers:vars]

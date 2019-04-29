@@ -1,0 +1,8 @@
+- name: Zookeeper cluster setup
+  hosts: zookeepers
+  become: yes
+  become_user: root
+  roles:
+    - role: Java-Linux
+    - role: Zookeeper
+      zookeeper_hosts: "{{groups['zookeepers']}}"
