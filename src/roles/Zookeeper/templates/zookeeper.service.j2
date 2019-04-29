@@ -1,0 +1,15 @@
+# {{ansible_managed}}
+
+[Unit]
+Description=ZooKeeper
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart={{zookeeper_dir}}/bin/zkServer.sh start
+
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,44 @@
+---
+- name: "Ensure the tarball dir exists at {{zookeeper_tarball_dir}}"
+  file: path={{zookeeper_tarball_dir}} state=directory
+
+- name: "Ensure the zookeeper dir exists at {{zookeeper_dir}}"
+  file: path={{zookeeper_dir}} state=directory
+
+- name: Download zookeeper version.
+  get_url: url={{zookeeper_url}} dest={{zookeeper_tarball_dir}}/zookeeper-{{zookeeper_version}}.tar.gz
+  tags: bootstrap
+
+- name: Unpack tarball.
+  command: tar zxf {{zookeeper_tarball_dir}}/zookeeper-{{zookeeper_version}}.tar.gz --strip-components=1 chdir={{zookeeper_dir}} creates={{zookeeper_dir}}/bin
+  tags: bootstrap
+
+- group: name=zookeeper system=yes
+- user: name=zookeeper group=zookeeper system=yes
+
+- name: Change ownership on zookeeper directory.
+  file: path={{zookeeper_dir}} state=directory owner=zookeeper group=zookeeper
+  tags: bootstrap
+
+- name: "Create zookeeper {{item}} directory."
+  file: path={{item}} state=directory owner=zookeeper group=zookeeper
+  tags: bootstrap
+  with_items:
+    - "{{data_dir}}"
+    - "{{log_dir}}"
+
+- name: Write myid file.
+  template: src=myid.j2 dest={{data_dir}}/myid owner=zookeeper group=zookeeper force="{{ zookeeper_force_myid }}"
+  tags: deploy
+  notify:
+    - Restart zookeeper
+
+- name: Configure zookeeper zoo.cfg
+  template: src=zoo.cfg.j2 dest={{ zookeeper_dir }}/conf/zoo.cfg owner=zookeeper group=zookeeper
+  tags: deploy
+  notify:
+    - Restart zookeeper
+
+- name: Add zookeeper's bin dir to the PATH
+  copy: content="export PATH=$PATH:{{zookeeper_dir}}/bin" dest="/etc/profile.d/zookeeper_path.sh" mode=755
+  when: zookeeper_register_path_env

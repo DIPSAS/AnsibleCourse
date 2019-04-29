@@ -1,0 +1,27 @@
+---
+- name: Register port 2181 in firewalld
+  firewalld:
+    port: 2181/tcp
+    permanent: true
+    state: enabled
+  register: mainport
+
+- name: Register port 2888 in firewalld
+  firewalld:
+    port: 2888/tcp
+    permanent: true
+    state: enabled
+
+- name: Register port 3888 in firewalld
+  firewalld:
+    port: 3888/tcp
+    permanent: true
+    state: enabled
+
+- name: Reload firewalld if ports have changed
+  systemd:
+    name: firewalld.service
+    state: reloaded
+  when:
+    - mainport.changed
+    - ansible_service_mgr == 'systemd'

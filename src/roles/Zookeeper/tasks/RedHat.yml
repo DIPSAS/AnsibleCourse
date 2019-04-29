@@ -1,0 +1,16 @@
+---
+  
+- name: Install OS Packages
+  yum: name={{ item }} state=present
+  with_items:
+    - libselinux-python
+
+- include: tarball.yml
+
+- include: firewalld.yml
+
+- include: upstart.yml
+  tags: deploy
+
+- include: systemd.yml
+  tags: deploy

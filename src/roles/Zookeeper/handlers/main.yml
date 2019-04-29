@@ -1,0 +1,9 @@
+---
+- name: Restart zookeeper
+  shell: "{{zookeeper_dir}}/bin/zkServer.sh restart"
+  #service: name=zookeeper state=restarted enabled=yes
+
+- name: Reload systemctl daemon
+  shell: "{{zookeeper_dir}}/bin/zkServer.sh restart"
+#  command: systemctl daemon-reload
+  when: ansible_service_mgr == 'systemd'
