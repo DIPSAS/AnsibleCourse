@@ -4,6 +4,15 @@ site_description: 'Internal Ansible Course for DIPS AS'
 site_author: 'Andreas Mosti / Tord Heimdal'
 site_url: 'https://github.com/DIPSAS/AnsibleCourse'
 
+# Navigation
+nav: 
+  - Home: index.md
+  - Exercises: 
+    - '01: Inventory' : exercises/01-Inventory.md
+    - '02: First Playbook' : exercises/02-FirstPlaybook.md
+    - '03: Roles' : exercises/03-Roles.md
+    - '05: DIPS Configuration Server ' : exercises/05-ConfigurationServer.md
+
 # Repository
 repo_name: 'DIPSAS/AnsibleCourse'
 repo_url: 'https://github.com/DIPSAS/AnsibleCourse'

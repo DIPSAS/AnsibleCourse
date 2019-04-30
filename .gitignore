@@ -1,5 +1,6 @@
 scriptcs_packages/
 output/
+site/
 id_rsa
 id_rsa.pub
 

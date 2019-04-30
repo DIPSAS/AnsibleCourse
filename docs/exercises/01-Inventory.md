@@ -1,3 +1,5 @@
+# Exercise 01: Inventory
+
 ## Inventory - Windows
 
 1) Add your Windows server to `inventory/servers.inventory` and update `[windows:vars]` with connection details, like username, connection method etc.

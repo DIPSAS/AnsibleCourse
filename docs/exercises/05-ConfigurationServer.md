@@ -1,3 +1,5 @@
+# Exercise 05: Installation of DIPS Configuration Server
+
 ## DIPS Configuration Server
 
 In this exercise the goal is to provision the Linux server with the `Zookeeper` playbook, and install DIPS Configuration Server on the Windows box.
