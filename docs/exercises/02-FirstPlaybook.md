@@ -1,4 +1,4 @@
-# Excersise 02: Playbook and simple tasks
+# Exercise 02: Playbook and simple tasks
 
 ## My first Playbook
 
@@ -9,5 +9,8 @@
 3) Add a new *task* to the playbook for rebooting the server with the `win_reboot` module _only if the installed windows update required it_.
 
 4) Run the playbook against the inventory file.
+hint:
 
-    hint: `ansible-playbook -i [path/to/file.inventory] Appserver.yaml --verbose`
+```shell
+ansible-playbook -i [path/to/file.inventory] Appserver.yaml --verbose
+```
