@@ -12,6 +12,7 @@ nav:
     - '02: First Playbook' : exercises/02-FirstPlaybook.md
     - '03: Roles' : exercises/03-Roles.md
     - '05: DIPS Configuration Server ' : exercises/05-ConfigurationServer.md
+  - Presentation: presentation.md
 
 # Repository
 repo_name: 'DIPSAS/AnsibleCourse'
