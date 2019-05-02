@@ -13,6 +13,7 @@ nav:
     - '03: Roles' : exercises/03-Roles.md
     - '05: DIPS Configuration Server ' : exercises/05-ConfigurationServer.md
   - Presentation: presentation.md
+  - Resources: resources.md
 
 # Repository
 repo_name: 'DIPSAS/AnsibleCourse'

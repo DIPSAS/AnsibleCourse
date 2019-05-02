@@ -29,3 +29,12 @@ Verify with `ansible --version`.
 >sudo apt-get update
 >sudo apt-get upgrade
 >```
+
+## Editor
+
+It is highly recommended to use an editor with _tree view_ (showing file and folder structure) feature when working with Ansible codebases.
+
+Recommendations are
+
+* [VSCode](https://code.visualstudio.com/) with [Ansible](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) plugin.
+* [Atom](https://atom.io/) with [language-ansible](https://atom.io/packages/language-ansible) and [file-icons](https://atom.io/packages/file-icons) plugins.
