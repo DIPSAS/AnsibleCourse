@@ -11,6 +11,7 @@ nav:
     - '01: Inventory' : exercises/01-Inventory.md
     - '02: First Playbook' : exercises/02-FirstPlaybook.md
     - '03: Roles' : exercises/03-Roles.md
+    - '04: Encrypted values' : exercises/04-Vault.md
     - '05: DIPS Configuration Server ' : exercises/05-ConfigurationServer.md
   - Presentation: presentation.md
   - Resources: resources.md
