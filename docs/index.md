@@ -30,6 +30,16 @@ Verify with `ansible --version`.
 >sudo apt-get upgrade
 >```
 
+## Clone the project
+
+Make sure [git is installed](https://git-scm.com/download/) and clone the project:
+
+```shell
+git clone https://github.com/DIPSAS/AnsibleCourse.git
+```
+
+Navigate to the folder `AnsibleCourse/src`, this will be the working directory.
+
 ## Editor
 
 It is highly recommended to use an editor with _tree view_ (showing file and folder structure) feature when working with Ansible codebases.
