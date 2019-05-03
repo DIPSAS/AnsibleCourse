@@ -1,7 +1,16 @@
-[windows]
-
-[windowsserver:vars]
+[Appserver]
+vt-optimus-app01.dips.local
 
 [zookeepers]
+vt-optimus-zookeeper.dips.local
+
+[windowsserver:vars]
+ansible_user: ansibleadmin
+ansible_password:
+ansible_port: 5986
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore
 
 [zookeepers:vars]
+ansible_user: root
+ansible_port: 22
