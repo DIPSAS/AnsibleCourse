@@ -6,6 +6,8 @@
 
 2) Create a new role called `IIS`. This role will install IIS features with the `win_feature` module.
 
+hint: [win_feature module](https://docs.ansible.com/ansible/latest/modules/win_feature_module.html)
+
 3) Create a `defaults/main.yaml` file and add a _variable_ called `IISFeatures` containing the following features:
 
 * `Web-Server`
