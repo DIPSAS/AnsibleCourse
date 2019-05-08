@@ -1,4 +1,4 @@
-# Exercise 05: Installation of DIPS Configuration Server
+# Exercise 06: Installation of DIPS Configuration Server
 
 ## DIPS Configuration Server
 

@@ -1,0 +1,5 @@
+- name: Install Stratos Chocolatey service
+  win_chocolatey: 
+    name: stratos 
+    state: latest
+  register: stratos

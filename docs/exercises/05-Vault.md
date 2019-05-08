@@ -1,6 +1,6 @@
-# Exercise 04: Ansible Vault and encrypted secrets
+# Exercise 05: Ansible Vault and encrypted secrets
 
-## Roles with encrypted variables, variable scoping
+## Roles with  encrypted variables, variable scoping
 
 1) Create a *role* named `LocalUsers` with with `defaults/main.yaml` and `tasks/main.yaml`.
 

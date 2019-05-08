@@ -4,6 +4,8 @@
 
 1) Add your Windows server to `inventory/servers.inventory` and update `[windows:vars]` with connection details, like username, connection method etc.
 
+hint: [Connecting to a Windows Host](https://www.ansible.com/blog/connecting-to-a-windows-host)
+
 2) Use the `win_ping` module to verify that a connection can be made to the server.
 
 hint:

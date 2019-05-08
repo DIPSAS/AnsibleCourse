@@ -2,7 +2,7 @@
 
 ## Roles, variables and iterators
 
-1) Create a *role* for the windows update tasks from exercise 2 and change the playbook to use this role.
+1) Create a *role* for the windows update tasks from exercise 2 and change the playbook to use this role (remove the `tasks:` list and replace it with `roles:`)
 
 2) Create a new role called `IIS`. This role will install IIS features with the `win_feature` module.
 
@@ -17,7 +17,6 @@
 hint: `yaml` lists are on the following format: 
 
 ```yaml
-
 list:
     - item 1
     - item 2
