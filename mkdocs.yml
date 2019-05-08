@@ -14,7 +14,7 @@ nav:
     - '04: Templates and handlers' : exercises/04-TemplatesHandlers.md
     - '05: Vault and encrypted secrets' : exercises/05-Vault.md
     - '06: DIPS Configuration Server ' : exercises/06-ConfigurationServer.md
-    - Presentation: presentation.md
+  - Presentation: presentation.md
   - Resources: resources.md
 
 # Repository
