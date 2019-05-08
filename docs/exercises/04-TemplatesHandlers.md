@@ -2,7 +2,7 @@
 
 ## Roles with  templates and handlers
 
-1) Update the *role* named `Stratos` with a *task* for copying `log4net.config` to the install-location of Stratos (variable `stratosInstallfolder`).
+1) Add the `Stratos` *role* to the playbook. Update the *role* with a *task* for copying `log4net.config` to the install-location of Stratos (variable `stratosInstallfolder`).
 
 hint: [win_template](https://docs.ansible.com/ansible/latest/modules/win_template_module.html)
 
