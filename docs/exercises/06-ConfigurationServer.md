@@ -2,7 +2,7 @@
 
 ## DIPS Configuration Server
 
-In this exercise the goal is to provision the Linux server with the `Zookeeper` playbook, and install DIPS Configuration Server on the Windows box.
+In this exercise the goal is to install DIPS Configuration Server on the Windows box and configure it to reach the Linux (Zookeeper) box in the same inventory.
 
 1) Create a *role* named `DotnetFramework462` with a task that installs `Dotnet Framework 4.6.2`, a requirement for DIPS Configuration Server. Add the role to `Appserver.yaml`.
 

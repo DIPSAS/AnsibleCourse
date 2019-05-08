@@ -20,6 +20,8 @@ ansible [host_group_name_in_inventory_file] -i inventory/servers.inventory -m wi
 
 2) Generate SSH keypair on the Ansible controller machine.
 
+hint: [link](https://www.ssh.com/ssh/copy-id)
+
 3) Transfer the SSH public-key to the Linux machine.
 
 4) Use the `ping` module to verify that a connection can be made to the server.
