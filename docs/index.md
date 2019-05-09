@@ -48,3 +48,18 @@ Recommendations are
 
 * [VSCode](https://code.visualstudio.com/) with [Ansible](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) plugin.
 * [Atom](https://atom.io/) with [language-ansible](https://atom.io/packages/language-ansible) and [file-icons](https://atom.io/packages/file-icons) plugins.
+
+## Alternative installation with Vagrant
+
+A prebuilt Virtual Machine can be used with [Vagrant](https://www.vagrantup.com/) and the `Vagrantfile` in the repo.
+
+Clone the project and:
+
+```shell
+vagrant up
+
+# Let Vagrant download the VM image and provision it with Ansible
+vagrant ssh
+
+cd /vagrant/
+```
