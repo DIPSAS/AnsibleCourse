@@ -1,6 +1,11 @@
-[windows]
+[windows_server]
+vt-optimus-srv4.dips.local
 
-[windowsserver:vars]
+[windows_server:vars]
+ansible_user=
+ansible_password=
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
 
 [zookeepers]
 
