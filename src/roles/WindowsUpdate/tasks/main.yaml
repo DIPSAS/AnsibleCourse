@@ -1,0 +1,9 @@
+- name: Install security updates
+  win_updates:
+    category_names:
+      - SecurityUpdates
+  register: win_update_result
+    
+- name: Reboot server if required
+  win_reboot:
+  when: win_update_result.reboot_required
