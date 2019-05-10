@@ -1,6 +1,6 @@
-[windows]
+[windows_server]
 
-[windowsserver:vars]
+[windows_server:vars]
 
 [zookeepers]
 
