@@ -1,7 +1,16 @@
 [windows_server]
+az-ne-ansc01 ansible_host=13.73.163.110
 
 [windows_server:vars]
+ansible_user=ansibleadmin
+ansible_password=Passord1Passord1
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
 
 [zookeepers]
+vt-ansible-zook.dips.local
 
 [zookeepers:vars]
+ansible_user = root
+ansible_connection=ssh
+ansible_winrm_server_cert_validation=ignore
