@@ -2,3 +2,4 @@
   hosts: windows_server
   roles:
     - WindowsUpdate
+    - IIS

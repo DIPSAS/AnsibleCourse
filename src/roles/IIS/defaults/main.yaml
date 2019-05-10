@@ -1,0 +1,6 @@
+IISFeature:
+  - Web-Server
+  - Web-Common-Http
+  - Web-App-Dev
+  - Web-Net-Ext45
+  - Web-Asp-Net45
