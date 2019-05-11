@@ -3,3 +3,4 @@
   roles:
     - WindowsUpdate
     - IIS
+    - Stratos

@@ -1,5 +1,48 @@
+# https://github.com/ansible/ansible/issues/53860
+- name: install Chocolatey
+  win_chocolatey:
+    name: chocolatey
+    state: present
+  tags: stratos
+
+  # https://github.com/ansible/ansible/issues/53860
+- name: disable enhanced exit codes
+  win_chocolatey_feature:
+    name: useEnhancedExitCodes
+    state: disabled
+  tags: stratos
+
 - name: Install Stratos Chocolatey service
   win_chocolatey: 
     name: stratos 
     state: latest
   register: stratos
+  notify: Restart Stratos service
+  tags: stratos
+
+- name: Copy log4net config file
+  win_template:
+    src: log4net.config
+    dest: "{{ stratosInstallfolder }}\\log4net.config"
+  notify: Restart Stratos service
+  when: stratos is succeeded
+  tags: stratos
+
+- name: Ensure StratosService is running and enabled
+  win_service:
+    name: StratosService
+    state: started
+    start_mode: auto
+  tags: stratos
+
+- name: Send web request to Stratos service
+  win_uri:
+    url: "http://{{ansible_hostname}}:1337/api/chocoPackages"
+  register: http_output
+  tags: stratos
+ 
+- name: Output error if service not responding with http 200
+  fail:
+    msg: "Stratos web service is not responding with http 200: {{ http_output.url }}"
+  when: http_output.status_code != 200
+  tags: stratos

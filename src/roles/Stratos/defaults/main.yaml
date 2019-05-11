@@ -1,1 +1,2 @@
-stratosInstallfolder: "C:\ProgramData\chocolatey\lib\stratos\bin"
+stratosInstallfolder: "C:\\ProgramData\\chocolatey\\lib\\stratos\\bin"
+logLevel: "info"
