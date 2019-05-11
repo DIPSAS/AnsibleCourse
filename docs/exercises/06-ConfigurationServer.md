@@ -8,8 +8,8 @@ In this exercise the goal is to install DIPS Configuration Server on the Windows
 
     hint: [Package URL](https://chocolatey.org/packages/dotnet4.6.2/4.6.01590.20190226). The package requires a reboot, so have `win_update` handy.
 
-3) Update the role `ConfigurationServer` with `tasks/main.yaml` and write the *task* for installing the chocolatey package for DIPS Configuration Server, using the started variable set in `defaults/main.yaml`.
+2) Update the role `ConfigurationServer` with `tasks/main.yaml` and write the *task* for installing the chocolatey package for DIPS Configuration Server, using the started variable set in `defaults/main.yaml`.
 
-4) Write a *task* that verifies the health-endpoint for the installed DIPS Configuration Server.
+3) Write a *task* that verifies the health-endpoint for the installed DIPS Configuration Server.
 
-5) Add the *role* `ConfigurationServer` to `Appserver.yaml`
+4) Add the *role* `ConfigurationServer` to `Appserver.yaml`
