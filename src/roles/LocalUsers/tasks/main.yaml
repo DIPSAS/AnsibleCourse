@@ -10,7 +10,7 @@
   tags: localusers
 
 # Ser ikkje ut som denne her trengs, det hold å være med i Remote Desktop Users gruppa
-  - name: Add user permissions
+- name: Add user permissions
   win_user_right:
     name: SeRemoteInteractiveLogonRight
     users:
