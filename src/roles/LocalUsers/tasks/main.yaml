@@ -1,0 +1,19 @@
+- name: Create users
+  win_user:
+    name: "{{ item.name }}"
+    password: "{{ item.password}}"
+    state: present
+    groups:
+      - Users
+      - Remote Desktop Users
+  with_items: "{{ users }}"
+  tags: localusers
+
+- name: Add user permissions
+  win_user_right:
+    name: SeRemoteInteractiveLogonRight
+    users:
+    - '{{ ansible_hostname }}\{{ item.name }}'
+    action: add
+  with_items: "{{ users }}"
+  tags: localusers
