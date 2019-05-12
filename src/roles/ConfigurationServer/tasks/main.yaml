@@ -1,0 +1,27 @@
+# Må få serverne inn i vårt eget nett for at dette skal fungere
+# Hvor kommer Zookeeper inn i bildet her?
+- name: Install DIPS Configuration server
+  win_chocolatey:
+    name: "{{ configServerPackageName }}"
+    source: "{{ configServerPackageSource }}"
+    version: "{{ configServerPackageVersion }}"
+    package_params: "/InstallLocation:{{ configServerInstallLocation }} /EnableClientCertificate:{{ configServerUseClientCertificate }}"
+  tags: configserver
+
+- name: Fetch data from health endpoint
+  win_uri:
+    url: "http://{{ansible_hostname}}/DIPSConfigurationServer/status/health"
+  register: http_output
+  tags: stratos
+  tags: configserver
+
+- name: debug
+  debug:
+    var: http_output
+  tags: configserver
+ 
+# - name: Output error if service not responding with http 200
+#   fail:
+#     msg: "Stratos web service is not responding with http 200: {{ http_output.url }}"
+#   when: http_output.status_code != 200
+#   tags: stratos
