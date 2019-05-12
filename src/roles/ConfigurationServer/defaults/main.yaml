@@ -1,4 +1,4 @@
-configServerPacakgeSource: http://dips-nuget/nuget/Arena-17.2-Choco/
+configServerPackageSource: http://dips-nuget/nuget/Arena-17.2-Choco/
 configServerPackageName: DIPS-Arena-Configuration-Server-IIS
 configServerPackageVersion: 1.2.52
 
