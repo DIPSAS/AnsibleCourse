@@ -1,5 +1,5 @@
 [windows_server]
-az-ne-ansc02 ansible_host=10.6.0.5
+az-ne-ansc010 ansible_host=10.6.0.14
 
 [windows_server:vars]
 ansible_user=ansibleadmin
