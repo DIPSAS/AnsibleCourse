@@ -1,17 +1,3 @@
-# https://github.com/ansible/ansible/issues/53860
-- name: install Chocolatey
-  win_chocolatey:
-    name: chocolatey
-    state: present
-  tags: stratos
-
-  # https://github.com/ansible/ansible/issues/53860
-- name: disable enhanced exit codes
-  win_chocolatey_feature:
-    name: useEnhancedExitCodes
-    state: disabled
-  tags: stratos
-
 - name: Install Stratos Chocolatey service
   win_chocolatey: 
     name: stratos 
@@ -25,7 +11,7 @@
     src: log4net.config
     dest: "{{ stratosInstallfolder }}\\log4net.config"
   notify: Restart Stratos service
-  when: stratos is succeeded
+  when: stratos.changed
   tags: stratos
 
 - name: Ensure StratosService is running and enabled
