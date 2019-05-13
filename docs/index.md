@@ -44,7 +44,7 @@ Navigate to the folder `AnsibleCourse/src`, this will be the working directory.
 
 It is highly recommended to use an editor with _tree view_ (showing file and folder structure) feature when working with Ansible codebases.
 
-Recommendations are
+Recommendations are (pick one):
 
 * [VSCode](https://code.visualstudio.com/) with [Ansible](https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible) plugin.
 * [Atom](https://atom.io/) with [language-ansible](https://atom.io/packages/language-ansible) and [file-icons](https://atom.io/packages/file-icons) plugins.
