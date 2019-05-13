@@ -8,13 +8,3 @@
       - Remote Desktop Users
   with_items: "{{ users }}"
   tags: localusers
-
-# Ser ikkje ut som denne her trengs, det hold å være med i Remote Desktop Users gruppa
-- name: Add user permissions
-  win_user_right:
-    name: SeRemoteInteractiveLogonRight
-    users:
-    - '{{ ansible_hostname }}\{{ item.name }}'
-    action: add
-  with_items: "{{ users }}"
-  tags: localusers
