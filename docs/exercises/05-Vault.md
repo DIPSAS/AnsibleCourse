@@ -17,6 +17,7 @@ hint 2: [link](https://stackoverflow.com/a/44241343/3793019)
 3) Use `win_user` and  create some users and give them *remote desktop* permissions (use the usernames and passwords from the previous bullet) to create these.
 
 hint: `groups: Remote Desktop Users`, [link](https://docs.ansible.com/ansible/latest/modules/win_user_module.html)
+hint2: Avoid leaking passwords in clear text with [no_log: true](https://serverfault.com/a/766095)
 
 4) Log on to the server with one of the new users.
 
