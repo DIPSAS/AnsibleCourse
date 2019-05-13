@@ -8,7 +8,7 @@ hint: [win_template](https://docs.ansible.com/ansible/latest/modules/win_templat
 
 2) In the `defaults/main.yaml`, create a variable `logLevel` with the value `info` and introduce this variable in `templates/log4net.config` => `<level value="Debug" />` (replace `Debug` with this variable).
 
-3) Create a *handler* that restarts the `Stratos` service if:
+3) Create a *handler* that restarts the `StratosService` service if:
     
 * A new version of Stratos is installed
 * The `log4net.config` file changes.
