@@ -14,6 +14,10 @@ ansible-vault encrypt_string [my-text-string] --ask-vault-pass
 hint 2: [link](https://stackoverflow.com/a/44241343/3793019)
 
 
-3) Use `win_user` and `win_user_right` create some users and give them *remote desktop* permissions (use the usernames and passwords from the previous bullet) to create these.
+3) Use `win_user` and  create some users and give them *remote desktop* permissions (use the usernames and passwords from the previous bullet) to create these.
 
-4) Override the `users` variable in `group_vars/windows.yaml` with new usernames and passwords.
+hint: `groups: Remote Desktop Users`, [link](https://docs.ansible.com/ansible/latest/modules/win_user_module.html)
+
+4) Log on to the server with one of the new users.
+
+5) Override the `users` variable in `group_vars/windows.yaml` with new usernames and passwords.
