@@ -1,4 +1,4 @@
-- name: Windows update for application server
+- name: Application server provisioning
   hosts: windows_server
   roles:
     - WindowsUpdate
