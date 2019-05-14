@@ -1,4 +1,5 @@
 - name: Create users
+  no_log: true
   win_user:
     name: "{{ item.name }}"
     password: "{{ item.password}}"
