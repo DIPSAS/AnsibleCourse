@@ -12,6 +12,8 @@
 
 [Jeff Geerling Ansible Roles](https://github.com/geerlingguy?tab=repositories)
 
+[Ansible for the Windows Admin by Jeremy Murrah](https://www.youtube.com/watch?v=ZI20Y10OKd0)
+
 ### About Ansible, TDC 2018 Talk
 
 <script async class="speakerdeck-embed" data-id="e41471b7fd274d01b053c94af1b2b537" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
